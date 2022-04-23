@@ -55,12 +55,12 @@ end)
 
 --tema
 local themes = {
-Background = Color3.fromRGB(0, 4, 255),
-Glow = Color3.fromRGB(0, 255, 255),
-Accent = Color3.fromRGB(0, 255, 255),
-LightContrast = Color3.fromRGB(0, 255, 255),
-DarkContrast = Color3.fromRGB(255, 255, 255),  
-TextColor = Color3.fromRGB(0, 0, 0)
+Background = Color3.fromRGB(234, 244, 0), 
+	Glow = Color3.fromRGB(0, 221, 252), 
+	Accent = Color3.fromRGB(0, 244, 244), 
+	LightContrast = Color3.fromRGB(0, 238, 248), 
+	DarkContrast = Color3.fromRGB(255, 255, 255),  
+	TextColor = Color3.fromRGB(0, 0, 0)
 }
 
 --page pertama
