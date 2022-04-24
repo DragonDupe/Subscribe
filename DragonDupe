@@ -872,14 +872,6 @@ if game.Players.LocalPlayer.CurrentSaveSlot.Value ~= -1 and DupeMoney ~= nil the
     return
     end
     if DupeMoney ~= nil then
-    if Duping == true then
-    game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "By Dragon Dupe",
-                    Text = "You Must Subscribe Dragon Dupe",
-                    Duration = 15,
-                    })
-    return
-    end
     Duping = true
     local Folder
     if game.Players.LocalPlayer.CurrentSaveSlot.Value == -1 then
