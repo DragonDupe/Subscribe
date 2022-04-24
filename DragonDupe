@@ -55,12 +55,12 @@ end)
 
 --tema
 local themes = {
-Background = Color3.fromRGB(234, 244, 0), 
-	Glow = Color3.fromRGB(0, 221, 252), 
-	Accent = Color3.fromRGB(0, 244, 244), 
-	LightContrast = Color3.fromRGB(0, 238, 248), 
-	DarkContrast = Color3.fromRGB(255, 255, 255),  
-	TextColor = Color3.fromRGB(0, 0, 0)
+Background = Color3.fromRGB(0, 4, 255),
+Glow = Color3.fromRGB(0, 255, 255),
+Accent = Color3.fromRGB(0, 255, 255),
+LightContrast = Color3.fromRGB(0, 255, 255),
+DarkContrast = Color3.fromRGB(255, 255, 255),  
+TextColor = Color3.fromRGB(0, 0, 0)
 }
 
 --page pertama
@@ -737,7 +737,7 @@ end)
 local Duper = DragonDupe:addPage("Dupe", 5012544693)
 local DupeM = Duper:addSection("Money")
 local DupeA = Duper:addSection("Dupe Axe")
-
+local DupeG = Duper:addSection("Dupe Gift")
 
 dupelist = {"Slot Number 1","Slot Number 2","Slot Number 3","Slot Number 4","Slot Number 5","Slot Number 6"}
 varbs.dupeng = ""
@@ -837,6 +837,94 @@ if game.Players.LocalPlayer.CurrentSaveSlot.Value ~= -1 and DupeMoney ~= nil the
     end
     end
 end)
+
+
+DupeG:addDropdown("Slot Number", dupelist , function(dupedong)
+    varbs.dupeng = dupedong
+end)
+
+DupeG:addButton("Dupe Gift", function()
+    function ML(Tex)
+    game:GetService("Players").LocalPlayer.PlayerGui.MoneyDisplayGui.Text.Text = Tex
+    game:GetService("Players").LocalPlayer.PlayerGui.MoneyDisplayGui.Text.DropShadow.Text = Tex
+    end
+
+if varbs.dupeng == "Slot Number 1" then
+DupeMoney = 1
+elseif varbs.dupeng == "Slot Number 2" then
+DupeMoney = 2
+elseif varbs.dupeng == "Slot Number 3" then
+DupeMoney = 3
+elseif varbs.dupeng == "Slot Number 4" then
+DupeMoney = 4
+elseif varbs.dupeng == "Slot Number 5" then
+DupeMoney = 5
+elseif varbs.dupeng == "Slot Number 6" then
+DupeMoney = 6
+end
+
+if game.Players.LocalPlayer.CurrentSaveSlot.Value ~= -1 and DupeMoney ~= nil then
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "By Dragon Dupe",
+                    Text = "You Cant Have Any Slot Loaded",
+                    Duration = 15,
+                    })
+    return
+    end
+    if DupeMoney ~= nil then
+    if Duping == true then
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "By Dragon Dupe",
+                    Text = "You Must Subscribe Dragon Dupe",
+                    Duration = 15,
+                    })
+    return
+    end
+    Duping = true
+    local Folder
+    if game.Players.LocalPlayer.CurrentSaveSlot.Value == -1 then
+    if not game.Workspace:FindFirstChild("Folder") then
+    Folder = Instance.new("Folder", game:GetService("Workspace"))
+    end
+    
+    function Load(NumberSlot)
+    game.ReplicatedStorage.LoadSaveRequests.RequestLoad:InvokeServer(NumberSlot)
+    end
+    
+    game:GetService("Workspace").Folder.ChildAdded:connect(function(v)
+    if v.Name == "Part" then
+    game:GetService("Workspace").Folder.Part:Destroy()
+    wait()
+    game.ReplicatedStorage.Transactions.ClientToServer.Donate:InvokeServer(game.Players.LocalPlayer, game.Players.LocalPlayer.leaderstats.Money.Value, 1)
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "By Dragon Dupe",
+                    Text = "Subscribe Dragon Dupe",
+                    Duration = 15,
+                    })
+    end
+    end)
+    
+    Load(DupeMoney)
+    if game.Players.LocalPlayer.leaderstats.Money.Value == 20 then
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "By Dragon Dupe",
+                    Text = "You Must Load Your Base, Repeat The Command Again",
+                    Duration = 15,
+                    })
+    Duping = false
+    return 
+    end
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "By Dragon Dupe",
+                    Text = "Loaded Your Slot! Enjoy Dupe Gifts",
+                    Duration = 15,
+                    })
+    
+    end
+    end
+end)
+
+
 
 DupeA:addButton("Dupe Axe", function()
 
