@@ -1,4 +1,4 @@
-
+-- Subscribe Dragon Dupe
 local GILALUYA = Instance.new("ScreenGui")
 local WOW = Instance.new("Frame")
 local openclose = Instance.new("TextButton")
@@ -10,6 +10,7 @@ local DISCLAIMER = Instance.new("TextButton")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 
+
 GILALUYA.Name = "GILALUYA"
 GILALUYA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 GILALUYA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -19,7 +20,7 @@ WOW.Parent = GILALUYA
 WOW.BackgroundColor3 = Color3.fromRGB(198, 255, 207)
 WOW.BorderColor3 = Color3.fromRGB(0, 0, 0)
 WOW.BorderSizePixel = 3
-WOW.Position = UDim2.new(0.0150057189, 0, 0.306068569, 0)
+WOW.Position = UDim2.new(-9.29646194e-06, 0, 0.175052524, 0)
 WOW.Size = UDim2.new(0, 58, 0, 259)
 
 openclose.Name = "open close"
@@ -117,7 +118,7 @@ TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function please_subscribe() 
+local function Hello_Dragon_Dupe() -- openclose.Script 
 	local script = Instance.new('Script', openclose)
 
 	script.Parent.MouseButton1Click:Connect(function()	
@@ -137,8 +138,8 @@ local function please_subscribe()
 		end
 		end)
 end
-coroutine.wrap(please_subscribe)()
-local function dragondupewinning() 
+coroutine.wrap(Hello_Dragon_Dupe)()
+local function subs_to_Dragon_Dupe() -- DESTROY.Script 
 	local script = Instance.new('Script', DESTROY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -149,8 +150,8 @@ local function dragondupewinning()
 		})
 	end)
 end
-coroutine.wrap(dragondupewinning)()
-local function dragondupe() 
+coroutine.wrap(subs_to_Dragon_Dupe)()
+local function Subscribe_DragonDupe() -- DISCORD.Script 
 	local script = Instance.new('Script', DISCORD)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -161,8 +162,8 @@ local function dragondupe()
 		})
 	end)
 end
-coroutine.wrap(dragondupe)()
-local function Butter_is_good() 
+coroutine.wrap(Subscribe_DragonDupe)()
+local function Butter_is_good() -- X.Script 
 	local script = Instance.new('Script', X)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -174,7 +175,7 @@ local function Butter_is_good()
 	end)
 end
 coroutine.wrap(Butter_is_good)()
-local function Subscribe_To_Dragon_Dupe() 
+local function Dragon_Dupe_Channel() -- execute.Script 
 	local script = Instance.new('Script', execute)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -185,8 +186,8 @@ local function Subscribe_To_Dragon_Dupe()
 		})
 	end)
 end
-coroutine.wrap(Subscribe_To_Dragon_Dupe)()
-local function Dragon_Dupe_Channel() 
+coroutine.wrap(Dragon_Dupe_Channel)()
+local function Butterisgood() -- DISCLAIMER.Script 
 	local script = Instance.new('Script', DISCLAIMER)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -201,8 +202,8 @@ local function Dragon_Dupe_Channel()
 		})
 	end)
 end
-coroutine.wrap(Dragon_Dupe_Channel)()
-local function HSRUWE_fake_script() 
+coroutine.wrap(Butterisgood)()
+local function DragonDupe() -- WOW.Script 
 	local script = Instance.new('Script', WOW)
 
 	game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -210,4 +211,4 @@ local function HSRUWE_fake_script()
 		Text = "Welcome "..game.Players.LocalPlayer.Name
 	})
 end
-coroutine.wrap(HSRUWE_fake_script)()
+coroutine.wrap(DragonDupe)()
