@@ -179,7 +179,13 @@ local function Dragon_Dupe_Channel() -- execute.Script
 	local script = Instance.new('Script', execute)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/butters%20recode-obfuscated.lua'))()
+		
+
+
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/Butterhub.txt'))()
+
+
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "Dragon Dupe";
 			Text = "Butter Script Executed"
