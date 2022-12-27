@@ -2836,41 +2836,42 @@ function Library:credit(options)
 				setclipboard(options.V3rmillion)
 			end)
 		end
-		if options.Youtube then
-			local youtubeContainer = creditContainer:object("TextButton", {
-				AnchorPoint = Vector2.new(1, 1),
-				Size = UDim2.fromOffset(24, 24),
-				Position = UDim2.new(1, -45, 1, -8),
-				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("Copy Youtube Link")
-			local youtube = youtubeContainer:object("ImageLabel", {
-				Image = "http://www.roblox.com/asset/?id=8594086769",
-				Size = UDim2.new(1, -4, 1, -4),
-				Centered = true,
-				BackgroundTransparency = 1
-			})
 
-			youtubeContainer.MouseButton1Click:connect(function()
-				setclipboard(options.Youtube)
-				if options.Youtube then
-			local youtubeContainer = creditContainer:object("TextButton", {
+		if options.Youtube then
+			local YoutubeContainer = creditContainer:object("TextButton", {
 				AnchorPoint = Vector2.new(1, 1),
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -40, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("Copy Youtube Link")
-			local youtube = youtubeContainer:object("ImageLabel", {
+			}):round(5):tooltip("copy v3rm")
+			local youtube = YoutubeContainer:object("ImageLabel", {
 				Image = "http://www.roblox.com/asset/?id=8594086769",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
 			})
-
-			youtubeContainer.MouseButton1Click:connect(function()
+		
+			YoutubeContainer.MouseButton1Click:connect(function()
 				setclipboard(options.Youtube)
-			end)
-		end
+				if options.Youtube then
+			local YoutubeContainer = creditContainer:object("TextButton", {
+				AnchorPoint = Vector2.new(1, 1),
+				Size = UDim2.fromOffset(24, 24),
+				Position = UDim2.new(1, -45, 1, -8),
+				Theme = {BackgroundColor3 = {"Main", 10}}
+			}):round(5):tooltip("copy v3rm")
+			local youtube = YoutubeContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=11860097839",
+				Size = UDim2.new(1, -4, 1, -4),
+				Centered = true,
+				BackgroundTransparency = 1
+			})
+		
+			YoutubeContainer.MouseButton1Click:connect(function()
+				setclipboard(options.Youtube)
+		end)
 	end
+end
 
 
 	self._resize_tab({
